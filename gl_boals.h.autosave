@@ -20,8 +20,8 @@ Kordinate operator +(Kordinate b){return Kordinate(this->ret_X()+b.ret_X(),this-
 Kordinate operator -(Kordinate b){return Kordinate(this->ret_X()-b.ret_X(),this->ret_Y()-b.ret_Y());}
 Kordinate operator *(double b){return Kordinate(this->ret_X()*b,this->ret_Y()*b);}
 Kordinate operator /(double b){return Kordinate(this->ret_X()/b,this->ret_Y()/b);}
-//можно было бы вообще использовать Eigen::vector2D или uBlas какой нить, но я поздно спохватился
-//bool operator ==(Kordinate b){return (this->ret_X()==b.ret_X())&&(this->ret_Y()==b.ret_Y());}
+//можно было бы вообще использовать Eigen::vector2D или uBlas какой нить, или даже std::vallarray<double> но я поздно спохватился
+
 };
 
 class Velocity : public Kordinate
