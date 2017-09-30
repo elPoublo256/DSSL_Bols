@@ -1,6 +1,6 @@
 #ifndef WIDGET_H
 #define WIDGET_H
-
+#include <gl_boals.h>
 #include <QWidget>
 
 namespace Ui {
