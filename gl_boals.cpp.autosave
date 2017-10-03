@@ -1,6 +1,6 @@
 #include "gl_boals.h"
 #include <math.h>
-#include <qalgorithms.h>
+
 double modulsqr( Kordinate &a)
 {
   return (pow(a.ret_X(),2)+pow(a.ret_Y(),2));
@@ -14,7 +14,7 @@ double low_interaction(Kordinate& a)
 
 GL_Boals::GL_Boals()
 {
-
+ 
 }
 
 void calc_Acc_One(vector<GL_Boals *> arr_balls, int i)
