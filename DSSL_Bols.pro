@@ -8,7 +8,7 @@ QT       += core gui
 QT       += opengl
 QMAKE_LFLAGS += -fopenmp
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
-
+QMAKE_CXXFLAGS += -std=c++11
 TARGET = DSSL_Bols
 TEMPLATE = app
 
