@@ -11,7 +11,7 @@ double x_kord;
 double y_kord;
 public:
 Kordinate(){}
-Kordinate(const int& x,const int& y){x_kord=x; y_kord=y;}
+Kordinate(const double& x,const double& y){x_kord=x; y_kord=y;}
 Kordinate(const Kordinate& copy){x_kord=copy.x_kord;y_kord=copy.y_kord;}
 void set_Kordinate(const double& X,const double& Y){x_kord=X;y_kord=Y;}
  double ret_X(){return x_kord;}
@@ -58,6 +58,7 @@ private:
 public:
     GL_Boals();
     GL_Boals(const Kordinate& r, const Kordinate& v, const Kordinate& a);
+    GL_Boals(double& x=0, double& y=0, double& vx=0, double& vy=0, double& ax=0, double& ay=0);
     void set_kor(const Kordinate& r){kordinate=r;}
     void set_Velocity(const Kordinate& r){velocity=r;}
     void set_acceleration(const Kordinate& r){acceleration=r;}

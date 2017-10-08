@@ -36,7 +36,7 @@ DISTNAME      = DSSL_Bols1.0.0
 DISTDIR = /home/oem/elPoublo256/DSSL_Bols/build-DSSL_Bols-Desktop-Debug/.tmp/DSSL_Bols1.0.0
 LINK          = g++
 LFLAGS        = -m64 -fopenmp
-LIBS          = $(SUBLIBS) -L/usr/X11R6/lib64 glut32.lib -lQt5OpenGL -lQt5Widgets -lQt5Gui -lQt5Core -lGL -lpthread 
+LIBS          = $(SUBLIBS) -L/usr/X11R6/lib64 -lX11 -lGLU -lQt5OpenGL -lQt5Widgets -lQt5Gui -lQt5Core -lGL -lpthread 
 AR            = ar cqs
 RANLIB        = 
 SED           = sed
@@ -349,7 +349,8 @@ compiler_clean: compiler_moc_header_clean compiler_uic_clean
 ####### Compile
 
 main.o: ../main.cpp ../widget.h \
-		../gl_boals.h
+		../gl_boals.h \
+		../myglwidget.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o main.o ../main.cpp
 
 widget.o: ../widget.cpp ../widget.h \
