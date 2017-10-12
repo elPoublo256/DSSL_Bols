@@ -6,14 +6,20 @@
 class MyGLWidget : public QGLWidget
 {
 private:
-    GLUquadricObj* gluobj;
+
+
+    GL_Boals* boals_arr;
     int num_B;
-    vector<GL_Boals>* vB;
+    double xxx;
+
     void show_boals();
 public:
     void initializeGL();
     void resizeGL(int w, int h);
-    void paintGL();
+    void paintGL();void all_b_in_c();
+    void set_x(double xx, int i){boals_arr[i].set_x(xx);}
+    void set_y(double xx, int i){boals_arr[i].set_y(xx);}
+    int num_of_boals(){return num_B;}
 
 public:
     MyGLWidget();
